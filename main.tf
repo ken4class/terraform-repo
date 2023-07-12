@@ -1,6 +1,6 @@
 provider "aws" {}
 
-Remote state with s3
+#Remote state with s3
 terraform {
   backend "s3" {
     bucket = "kenclass6"
