@@ -1,14 +1,14 @@
 provider "aws" {}
 
-#Remote state with s3
-# terraform {
-#   backend "s3" {
-#     bucket = "kenclass6"
-#     key    = "terraform.tfstate"
-#    # dynamodb_table = "statelock"
-#     region = "us-east-1"
-#   }
-# }
+Remote state with s3
+terraform {
+  backend "s3" {
+    bucket = "kenclass6"
+    key    = "terraform.tfstate"
+   # dynamodb_table = "statelock"
+    region = "us-east-1"
+  }
+}
 
 # #VPC block
 # module "myvpc" {
