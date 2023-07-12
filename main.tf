@@ -92,9 +92,9 @@ resource "aws_lb_target_group" "test" {
 
 resource "aws_lb_target_group_attachment" "test" {
   target_group_arn = aws_lb_target_group.test.arn
-  for_each = aws_instance.newec2
-  target_id        = aws_instance.newec2[each.key].id
-  #target_id        = aws_instance.newec2.id
+  #for_each = aws_instance.newec2
+  #target_id        = aws_instance.newec2[each.key].id
+  target_id        = aws_instance.newec2.id
   port             = 80
 }
 
